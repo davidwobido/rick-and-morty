@@ -16,7 +16,7 @@ export default function createCharacterCard({
           className: styles.nameStatus,
         },
         [
-          createElement("div", {
+          createElement("h2", {
             className: styles.headline,
             textContent: name,
           }),
@@ -60,6 +60,5 @@ export default function createCharacterCard({
       ),
     ]),
   ]);
-
   return characterCard;
 }
