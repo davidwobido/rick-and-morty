@@ -32,6 +32,7 @@ function renderApp() {
   );
 
   const footerElement = createElement("footer", {
+    className: "footerElement",
     textContent: "Footer",
   });
 

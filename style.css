@@ -39,7 +39,7 @@ main {
   padding: 2rem;
 }
 
-footer {
+.footerElement {
   position: fixed;
   bottom: 0;
   background-color: var(--color-background-header);
