@@ -6,9 +6,14 @@ export default function createCharacterCard({
   status,
   location,
   firstSeen,
+  pic,
 }) {
   const characterCard = createElement("article", { className: styles.card }, [
-    createElement("div", { className: styles.image, textContent: "Picture" }),
+    createElement("img", {
+      className: styles.image,
+      alt: "",
+      src: pic,
+    }),
     createElement("div", { className: styles.textWrapper }, [
       createElement(
         "div",

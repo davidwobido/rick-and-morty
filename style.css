@@ -40,7 +40,7 @@ main {
 }
 
 .footerElement {
-  position: fixed;
+  position: static;
   bottom: 0;
   background-color: var(--color-background-header);
   color: var(--color-primary);

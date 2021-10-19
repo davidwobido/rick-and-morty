@@ -25,16 +25,25 @@ function renderApp() {
     },
     [
       createCharacterCard({
-        name: "Toxic",
+        pic: "https://rickandmortyapi.com/api/character/avatar/361.jpeg",
+        name: "Toxic Rick",
         status: "Dead",
         location: "Earth",
         firstSeen: "Rest and Ricklaxation",
       }),
       createCharacterCard({
+        pic: "https://rickandmortyapi.com/api/character/avatar/199.jpeg",
         name: "Larva Alien",
         status: "Alive",
         location: "Planet Squanch",
         firstSeen: "Get Schwifty",
+      }),
+      createCharacterCard({
+        pic: "https://rickandmortyapi.com/api/character/avatar/219.jpeg",
+        name: "Mechanical Summer",
+        status: "Unknown",
+        location: "Earth",
+        firstSeen: "Rickmancing the Stone",
       }),
     ]
   );
