@@ -23,7 +23,20 @@ function renderApp() {
     {
       className: "main",
     },
-    [createCharacterCard()]
+    [
+      createCharacterCard({
+        name: "Toxic",
+        status: "Dead",
+        location: "Earth",
+        firstSeen: "Rest and Ricklaxation",
+      }),
+      createCharacterCard({
+        name: "Larva Alien",
+        status: "Alive",
+        location: "Planet Squanch",
+        firstSeen: "Get Schwifty",
+      }),
+    ]
   );
 
   const footerElement = createElement("footer", {

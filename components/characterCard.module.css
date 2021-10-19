@@ -1,7 +1,14 @@
 .card {
   padding: 1rem;
-  background: green;
+  background: var(--color-background-cards);
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 40% 60%;
+
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.textWrapper {
+  display: grid;
+  gap: 2rem;
 }
