@@ -10,10 +10,10 @@
   --font-family-text: "Karla", sans-serif;
 
   /* Color  */
-  --color-primary: #000b3e;
+  --color-primary: #182d44;
   --color-secondary: #ffe67d;
   --color-background-header: #b5abff;
-  --color-background-cards: #3b3f54;
+  --color-background-cards: #49627c;
   --color-signal: #fe9670;
   --color-text: white;
 }
@@ -24,8 +24,8 @@ header {
   background-color: var(--color-background-header);
   padding: 5rem 2rem;
   text-align: center;
-  font-size: 2.3rem;
-  line-height: 3.7rem;
+  font-size: 2.5rem;
+  line-height: 3.9rem;
 }
 
 body {
