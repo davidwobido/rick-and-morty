@@ -42,12 +42,13 @@ function renderApp() {
     },
   ];
 
-  const characterCards = characters.map((character) =>
-    createCharacterCard(character)
-  );
+  // const characterCards = characters.map((character) =>
+  //   createCharacterCard(character)
+  // );
 
-  // const characterCards = function.map
-  //   return createCharacterCard(character);
+  const characterCards = characters.map(function (character) {
+    return createCharacterCard(character);
+  });
 
   const mainElement = createElement(
     "main",
