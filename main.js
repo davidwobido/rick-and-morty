@@ -1,3 +1,4 @@
+import createCharacterCard from "./components/CharacterCard";
 import { createElement } from "./lib/elements";
 import "./style.css";
 
@@ -23,10 +24,26 @@ function renderApp() {
       className: "main",
     },
     [
-      createElement("section", {
-        className: "cardElement",
-        textContent:
-          "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      createCharacterCard({
+        pic: "https://rickandmortyapi.com/api/character/avatar/361.jpeg",
+        name: "Toxic Rick",
+        status: "Dead",
+        location: "Earth",
+        firstSeen: "Rest and Ricklaxation",
+      }),
+      createCharacterCard({
+        pic: "https://rickandmortyapi.com/api/character/avatar/199.jpeg",
+        name: "Larva Alien",
+        status: "Alive",
+        location: "Planet Squanch",
+        firstSeen: "Get Schwifty",
+      }),
+      createCharacterCard({
+        pic: "https://rickandmortyapi.com/api/character/avatar/219.jpeg",
+        name: "Mechanical Summer",
+        status: "Unknown",
+        location: "Earth",
+        firstSeen: "Rickmancing the Stone",
       }),
     ]
   );
