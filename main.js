@@ -2,7 +2,7 @@ import createCharacterCard from "./components/CharacterCard";
 import { createElement } from "./lib/elements";
 import "./style.css";
 
-function renderApp() {
+async function renderApp() {
   const appElement = document.querySelector("#app");
 
   const headerElement = createElement(
@@ -18,37 +18,20 @@ function renderApp() {
     ]
   );
 
-  const characters = [
-    {
-      pic: "https://rickandmortyapi.com/api/character/avatar/361.jpeg",
-      name: "Toxic Rick",
-      status: "Dead",
-      location: "Earth",
-      firstSeen: "Rest and Ricklaxation",
-    },
-    {
-      pic: "https://rickandmortyapi.com/api/character/avatar/199.jpeg",
-      name: "Larva Alien",
-      status: "Alive",
-      location: "Planet Squanch",
-      firstSeen: "Get Schwifty",
-    },
-    {
-      pic: "https://rickandmortyapi.com/api/character/avatar/219.jpeg",
-      name: "Mechanical Summer",
-      status: "Unknown",
-      location: "Earth",
-      firstSeen: "Rickmancing the Stone",
-    },
-  ];
-
-  // const characterCards = characters.map((character) =>
-  //   createCharacterCard(character)
-  // );
+  const response = await fetch("https://rickandmortyapi.com/api/character");
+  const body = await response.json();
+  console.log(body);
+  const characters = body.results;
 
   const characterCards = characters.map(function (character) {
     return createCharacterCard(character);
   });
+
+  // const statusSymbol = function(status) {
+  //   if status = "Alive" {
+  //     return "🟢";
+  //   }
+  // }
 
   const mainElement = createElement(
     "main",
