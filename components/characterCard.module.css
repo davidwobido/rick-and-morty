@@ -17,13 +17,12 @@ main {
 
 .textWrapper {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
-  gap: 2rem;
+  /* grid-template-rows: 1fr 1fr 1fr; */
 }
 
 h2 {
   margin: 0rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
   letter-spacing: 0.1rem;
   line-height: 2.5rem;
 }
