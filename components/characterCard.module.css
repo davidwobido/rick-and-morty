@@ -9,20 +9,19 @@ main {
   padding: 1rem;
   background: var(--color-background-cards);
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 35% 65%;
   border-radius: 1rem;
   column-gap: 1rem;
+  overflow: hidden;
 }
 
 .textWrapper {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
-  gap: 2rem;
 }
 
 h2 {
   margin: 0rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
   letter-spacing: 0.1rem;
   line-height: 2.5rem;
 }
