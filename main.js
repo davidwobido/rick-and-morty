@@ -20,18 +20,11 @@ async function renderApp() {
 
   const response = await fetch("https://rickandmortyapi.com/api/character");
   const body = await response.json();
-  console.log(body);
   const characters = body.results;
 
   const characterCards = characters.map(function (character) {
     return createCharacterCard(character);
   });
-
-  // const statusSymbol = function(status) {
-  //   if status = "Alive" {
-  //     return "🟢";
-  //   }
-  // }
 
   const mainElement = createElement(
     "main",
