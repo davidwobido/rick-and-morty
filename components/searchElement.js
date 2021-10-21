@@ -26,13 +26,3 @@ export default function createSearchElement(onSubmit) {
   );
   return formElement;
 }
-
-// const searchBar = createElement("form", { className: "formSearch" }, [
-//   createElement("div", [
-//     createElement("input", { className: "seachInput", type: input }),
-//     createElement("button", { className: "searchButton", type: button }),
-//   ]),
-// ])
-
-// return ;
-// x^

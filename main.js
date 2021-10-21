@@ -19,7 +19,22 @@ async function renderApp() {
       }),
     ]
   );
-  const searchElement = createSearchElement();
+
+  async function handleSubmit(searchQuery) {
+    const response = await fetch(
+      "https://rickandmortyapi.com/api/character/?name=" + searchQuery
+    );
+    const body = await response.json();
+    const characters = body.results;
+    const characterElements = characters.map((character) =>
+      createCharacterCard(character)
+    );
+    console.log(characterElements);
+    mainElement.innerHTML = "";
+    mainElement.append(...characterElements);
+  }
+
+  const searchElement = createSearchElement(handleSubmit);
 
   const characters = await fetchCharacters();
 
