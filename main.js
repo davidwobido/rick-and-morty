@@ -1,4 +1,5 @@
-import createCharacterCard from "./components/CharacterCard";
+import createCharacterCard from "./components/characterCard";
+import createSearchElement from "./components/searchElement";
 import { createElement } from "./lib/elements";
 import { fetchCharacters } from "./lib/fetchElement";
 import "./style.css";
@@ -18,6 +19,7 @@ async function renderApp() {
       }),
     ]
   );
+  const searchElement = createSearchElement();
 
   const characters = await fetchCharacters();
 
@@ -38,7 +40,7 @@ async function renderApp() {
     textContent: "Footer",
   });
 
-  appElement.append(headerElement, mainElement, footerElement);
+  appElement.append(headerElement, searchElement, mainElement, footerElement);
 }
 
 renderApp();
